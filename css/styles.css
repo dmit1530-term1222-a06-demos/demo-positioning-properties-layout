@@ -1,0 +1,151 @@
+body {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* UTILITY CLASSES */
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+
+/* HEADER */
+header {
+    background-color: #3DB39E;
+    font-family: 'Signika', sans-serif;
+    color: #fff;
+    padding: 1rem;
+    /**vendor prefixes help make experimental properties and features compatible with browsers where support may be needed **/
+    position: -webkit-sticky;
+    position: sticky;
+    /** without a helper property, the sticky position won't function **/
+    top: 0;
+    /** this helps the header stay above all your content **/
+    z-index: 99;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header svg {
+    width: 3rem;
+    margin-right: 1rem
+}
+
+header svg path { fill: #fff; }
+
+/* MAIN LAYOUT */
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    font-family: 'Signika', sans-serif;
+    font-size: 5rem;
+    line-height: 1;
+    margin: 3rem auto;
+    text-align: right;
+    max-width: 22rem;
+}
+
+main h2 span {
+    display: block;
+    text-align: left;
+}
+
+.card {
+    background-color: #f4f0e8;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.sale,
+.new {
+    width: 4rem;
+    position: absolute;
+     top: 2rem;
+}
+
+.sale { right: 2rem; }
+
+.new { left: 2rem; }
+
+h3 {
+    line-height: 2;
+    margin-top: 1rem;
+}
+p {
+    margin: 1rem 0;
+}
+
+.price {
+    color: #dc6419;
+    font-weight: 600;
+}
+.price span {
+    color: #666;
+    text-decoration: line-through;
+}
+
+.card a {
+    color: #fff;
+    background-color: #3DB39E;
+    border-radius: 0.4rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 80%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card a:hover,
+.card a:focus {
+    background-color: #dc6419;      
+}
+
+.chat {
+    background-color: #fff;
+    border-radius:50%;
+    border: 2px dotted #3DB39E;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.chat img {
+    width: 3rem;
+}
+
+.chat p {
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 800px) {
+    .wide-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    /* or 
+    .card {
+        width: calc(100% / 3 - 1rem);
+    }
+    */
+}
